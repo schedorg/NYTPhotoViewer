@@ -1,3 +1,7 @@
+# Why this repository exists
+
+Our iOS app depends on this repository. The original upstream repository was deprecated, so we forked it to maintain it for continued use in our app.
+
 # NYTPhotoViewer
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -8,7 +12,7 @@ NYTPhotoViewer is a slideshow and image viewer that includes double-tap to zoom,
 
 ## Usage
 
-Usage is simple, with the option for more complicated customization when needed through a delegate relationship. In the most basic implementation, just initialize the view controller with an array of photo objects and present it as normal:
+Usage is simple, with the option for more complicated customization when needed through a delegate relationship. In the most basic implementation, just initialize the view controller with an array[...]
 
 ```objc
 NYTPhotosViewController *photosViewController = [[NYTPhotosViewController alloc] initWithPhotos:photos];
@@ -17,7 +21,7 @@ NYTPhotosViewController *photosViewController = [[NYTPhotosViewController alloc]
 
 ## Running the Example
 
-Clone this locally, then in your local workspace of the `NYTPhotoViewer` repo, run `./scripts/bootstrap`, then open Examples/NYTPhotoViewer.xcworkspace. You'll see targets for a Swift and Objective-C app.
+Clone this locally, then in your local workspace of the `NYTPhotoViewer` repo, run `./scripts/bootstrap`, then open Examples/NYTPhotoViewer.xcworkspace. You'll see targets for a Swift and Objectiv[...]
 
 ## Installation
 
@@ -41,7 +45,7 @@ NYTPhotoViewer may be installed via [Carthage](https://github.com/Carthage/Carth
 github "NYTimes/NYTPhotoViewer"
 ```
 
-Then, following the instructions for [integrating Carthage frameworks into your app](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos), link the `NYTPhotoViewer` and `PINRemoteImage` frameworks into your project.
+Then, following the instructions for [integrating Carthage frameworks into your app](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos), link the `NYTPhotoViewer` and [...]
 
 If you don't want support for animated GIFs, you may instead link against only the `NYTPhotoViewerCore` framework.
 
@@ -55,21 +59,21 @@ See [`CHANGELOG.md`](https://github.com/NYTimes/NYTPhotoViewer/blob/develop/CHAN
 
 ## Contributing
 
-Please **open pull requests against the `develop` branch**, and add a relevant note to the [`develop` section of the CHANGELOG](https://github.com/NYTimes/NYTPhotoViewer/blob/develop/CHANGELOG.md#develop) as part of your pull request.
+Please **open pull requests against the `develop` branch**, and add a relevant note to the [`develop` section of the CHANGELOG](https://github.com/NYTimes/NYTPhotoViewer/blob/develop/CHANGELOG.md#[...]
 
 ## Swift
 
-NYTPhotoViewer is written in Objective-C but is fully interoperable with Swift. If you experience any interoperability difficulties, please open an issue or pull request and we will work to resolve it.
+NYTPhotoViewer is written in Objective-C but is fully interoperable with Swift. If you experience any interoperability difficulties, please open an issue or pull request and we will work to resolv[...]
 
 ## Inspiration
 
-NYTPhotoViewer draws feature inspiration from Facebook and Tweetbot’s image viewers. If this implementation isn’t to your liking, you may consider [JTSImageViewController](https://github.com/jaredsinclair/JTSImageViewController) or [IDMPhotoBrowser](https://github.com/ideaismobile/IDMPhotoBrowser).
+NYTPhotoViewer draws feature inspiration from Facebook and Tweetbot’s image viewers. If this implementation isn’t to your liking, you may consider [JTSImageViewController](https://github.com/j[...]
 
 ## Implementation
 
-NYTPhotoViewer has a straightforward implementation using standard UIKit components. The viewer is a `UIViewController` and uses `UIViewController` transitioning APIs for the animated and interactive transitions, a `UIPageViewController` for horizontal swiping between images, and `UIScrollView` for image zooming.
+NYTPhotoViewer has a straightforward implementation using standard UIKit components. The viewer is a `UIViewController` and uses `UIViewController` transitioning APIs for the animated and interact[...]
 
-It is intended to be used without the need for subclassing, and as such it accepts model objects conforming to a `NYTPhoto` protocol and provides ample opportunity for customization via the `NYTPhotosViewControllerDelegate`. Since standard APIs are used, the client has full control over the transitions and customization of the `NYTPhotosViewController`.
+It is intended to be used without the need for subclassing, and as such it accepts model objects conforming to a `NYTPhoto` protocol and provides ample opportunity for customization via the `NYTPh[...]
 
 ## License
 
